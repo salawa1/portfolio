@@ -33,10 +33,10 @@ header {
 }
 
 img {
-    max-width: 100px; /* Adjust size as needed */
+    max-width: 100px;
     height: auto;
     cursor: pointer;
-    display: block; /* Remove any extra spacing */
+    display: block;
     padding: 20px;
 }
 
@@ -64,14 +64,14 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 1px;
-    position: relative; /* Needed for absolute positioning of the underline */
+    position: relative;
 }
 
 button::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; /* Adjust distance of underline from button */
+    bottom: -3px;
     width: 100%;
     height: 2px;
     background-color: rgb(255, 255, 255); 

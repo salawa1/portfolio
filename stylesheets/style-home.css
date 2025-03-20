@@ -28,11 +28,17 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    color: black;
+    font-size: 20px;
     line-height: 1.2;
-    margin: 15px;
-    padding: 0;
     text-align: left;
+    margin: 0;
+    padding: 10px 0;
+    max-width: 800px;
 }
 
 p {
@@ -41,33 +47,128 @@ p {
     padding: 10px 20px;
 }
 
-/* FLEX CONTAINER FOR IMAGE + TEXT */
 .main-content {
     display: flex;
-    align-items: flex-start; /* Aligns items to the top */
-    justify-content: flex-start; /* Keeps content on the left */
-    gap: 20px; /* Reduce space between image and text */
-    width: 80%;
-    max-width: 1000px;
-    margin-top: 50px; /* Remove extra space */
-    margin-left: 50px;
+    align-items: flex-start;
+    gap: 30px;
+    width: 95%;
+    max-width: 2000px;
+    margin: 50px auto;
 }
 
-/* IMAGE STYLING */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    max-width: none;
+    padding-right: none;
+}
+
 .main-content img {
-    width: 800px;
+    width: 500px;
     height: auto;
     border-radius: 20px;
 }
 
-/* ENSURE "ABOUT ME" STAYS NEXT TO IMAGE */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .main-content h1 {
-    flex-grow: 0; /* Prevents h1 from stretching */
-    text-align: left;
-    font-size: 50px; /* Adjust size to fit in one line */
-    white-space: nowrap; /* Prevents text from wrapping */
+    font-size: 50px;
+    white-space: nowrap;
     margin: 0;
     padding: 0;
+}
+
+.main-content h2 {
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 250;
+    font-style: normal;
+    color: black;
+    font-size: 25px;
+    line-height: 1.2;
+    text-align: left;
+    margin-top: 10px;
+    max-width: 1100px;
+}
+
+.leadership, .coursework, .skills {
+    margin-top: 125px;
+    max-width: 1500px;
+    margin-left: 50px;
+}
+
+.leadership h1, .coursework h1, .skills h1 {
+    font-size: 50px;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-weight: 250;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.leadership h2, .coursework h2, .skills h2 {
+    font-size: 30px;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-weight: 250;
+    color: black;
+    margin-left: 10px;
+    max-width: 100%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.leadership h3, .coursework h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(50, 50, 50);
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+.skills h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(50, 50, 50);
+    margin-left: 10px;
+    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+.leadership p {
+    font-size: 20px;
+    line-height: 1.4;
+    color: black;
+    max-width: 1000px;
+    margin-bottom: 15px;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Big Shoulders Inline", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    background-color: #bbbbbb;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.resume-button:hover {
+    background-color: #7d7d7d;
+    transform: scale(1.01);
 }
 
 button {
@@ -83,14 +184,14 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 1px;
-    position: relative; /* Needed for absolute positioning of the underline */
+    position: relative;
 }
 
 button::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; /* Adjust distance of underline from button */
+    bottom: -3px;
     width: 100%;
     height: 2px;
     background-color: rgb(255, 255, 255); 
