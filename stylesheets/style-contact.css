@@ -19,12 +19,26 @@ body {
 header {
     background: #2c3e50;
     color: white;
-    text-align: center;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
     transition: background 0.3s ease-in-out;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-name {
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 40px;
+    margin-left: 20px;
+    white-space: nowrap;
 }
 
 header button {
@@ -33,7 +47,7 @@ header button {
     color: white;
     border: none;
     padding: 12px 20px;
-    margin: 30px;
+    margin: 0 15px 0 0;
     font-size: 20px;
     cursor: pointer;
     position: relative;
@@ -125,4 +139,63 @@ footer {
     color: white;
     font-size: 15px;
     margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .contact-container {
+        width: 90%;
+        margin-top: 100px;
+        padding: 60px 40px;
+    }
+
+    .contact-icons {
+        gap: 40px;
+    }
+
+    img {
+        width: 100px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header button {
+        margin: 5px 10px;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .header-name {
+        margin-top: 8px;
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .contact-container {
+        width: 95%;
+        margin-top: 60px;
+        padding: 30px 15px;
+    }
+
+    .contact-icons {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    img {
+        width: 70px;
+    }
 }
